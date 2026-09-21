@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+
 # Uses Render's PostgreSQL when deployed, or local SQLite for testing
 db_url = os.environ.get("DATABASE_URL", "sqlite:///notes.db")
 if db_url.startswith("postgres://"):
